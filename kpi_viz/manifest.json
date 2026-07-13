@@ -1,74 +1,25 @@
 {
-  "name": "AvasFlowers KPI Comparison",
-  "description": "KPI card with fully custom current vs comparison date ranges, computed live in-browser.",
-  "version": "1",
+  "name": "AvasFlowers Visualizations",
+  "organization": "AvasFlowers",
+  "description": "Custom KPI comparison card with live in-browser date ranges.",
+  "logoUrl": "https://www.gstatic.com/images/icons/material/system/2x/insert_chart_black_24dp.png",
+  "organizationUrl": "https://www.avasflowers.net",
+  "supportUrl": "https://www.avasflowers.net",
+  "privacyPolicyUrl": "https://www.avasflowers.net",
+  "termsOfServiceUrl": "https://www.avasflowers.net",
+  "packageUrl": "https://dazam-avas.github.io/avas-dashboard-viz/kpi_viz/",
+  "devMode": true,
   "components": [
     {
       "id": "kpiComparison",
       "name": "KPI Comparison",
+      "description": "KPI card with current vs comparison values and live date pickers.",
       "iconUrl": "https://www.gstatic.com/images/icons/material/system/2x/insert_chart_black_24dp.png",
-      "type": "VISUALIZATION",
       "resource": {
-        "js": "main.js",
-        "css": "main.css"
-      },
-      "data": [
-        {
-          "id": "dateDim",
-          "label": "Date",
-          "elements": [
-            {
-              "id": "dateDim",
-              "type": "DIMENSION",
-              "options": ["DATE"],
-              "min": 1,
-              "max": 1
-            }
-          ]
-        },
-        {
-          "id": "valueMetric",
-          "label": "Value",
-          "elements": [
-            {
-              "id": "valueMetric",
-              "type": "METRIC",
-              "options": ["NUMBER"],
-              "min": 1,
-              "max": 1
-            }
-          ]
-        }
-      ],
-      "style": [
-        {
-          "id": "kpiLabel",
-          "label": "KPI label",
-          "elements": [
-            {
-              "id": "labelText",
-              "type": "TEXTINPUT",
-              "label": "Label shown above the numbers",
-              "defaultValue": "Metric"
-            }
-          ]
-        },
-        {
-          "id": "colors",
-          "label": "Colors",
-          "elements": [
-            {
-              "id": "accentColor",
-              "type": "FONT_COLOR",
-              "label": "Accent color",
-              "defaultValue": "#C9A84C"
-            }
-          ]
-        }
-      ],
-      "interactions": [
-        { "id": "onDateRangeChange", "supportedActions": ["FILTER"] }
-      ]
+        "js": "https://dazam-avas.github.io/avas-dashboard-viz/kpi_viz/main.js",
+        "config": "https://dazam-avas.github.io/avas-dashboard-viz/kpi_viz/config.json",
+        "css": "https://dazam-avas.github.io/avas-dashboard-viz/kpi_viz/main.css"
+      }
     }
   ]
 }
