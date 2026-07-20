@@ -94,4 +94,4 @@ function draw(data) {
   render(data);
 }
 
-dscc.subscribeToData(draw, { transform: dscc.objectTransform });
+dscc.subscribeToData(draw,  { transform: dscc.objectTransform });
